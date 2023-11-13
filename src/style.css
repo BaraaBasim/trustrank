@@ -5,6 +5,9 @@
   padding: 0;
   margin: 0;
 }
+body {
+    overflow: hidden; /* Hide scrollbars */
+}
 
 @font-face {
     font-family: "Roboto";
@@ -38,24 +41,17 @@
 
 .header button {
     font-family: "Roboto";
-    width: 20rem;
     text-decoration: none;
     border: none;
     color: black;
     padding: 10px;
-    cursor: pointer;
     background-color: white;
 }
 
-/* .header button:hover {
-    text-decoration: none;
-    border: none;
-    color: black;
-    padding: 10px;
-    border-radius: 10px;
-    padding-bottom: 7px;
+.header button:hover {
+    border-bottom: 2px solid black;
     cursor: pointer;
-} */
+}
 
 .logo {
     flex: 1;
