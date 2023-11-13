@@ -12,14 +12,14 @@ body {
 @font-face {
     font-family: "Roboto";
     src:
-      url("/Roboto-Regular.ttf");
-  }
+        url("/Roboto-Regular.ttf");
+}
 
-  @font-face {
+@font-face {
     font-family: "Roboto Bold";
     src:
-      url("/Roboto-Bold.ttf");
-  }
+        url("/Roboto-Bold.ttf");
+}
 
 
 #content {
@@ -76,13 +76,13 @@ body {
 .right-home {
     flex: 1;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
 }
 
 .img {
-    height: 100%;
-    width: 100%;
+    height: 80%;
+    width: 60%;
     background-image: url(/shipping.svg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -94,7 +94,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    width: 60%;
+    width: 40%;
 }
 
 .left-home h2{
@@ -124,7 +124,7 @@ body {
 
 .nav-bar button {
     text-transform: uppercase;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 /* Footer */
@@ -140,13 +140,13 @@ body {
     border-top: 1px solid var();
     background-color: rgba(0, 0, 0, 0.1);
     font-family: "Roboto";
-  }
-  
-  .fa-github {
+}
+/* 
+.fa-github {
     font-size: 2rem;
-  }
-  
-  .fa-github:hover {
+}
+
+.fa-github:hover {
     color: var(--font-color-dark);
-  }
-  
+}
+   */
