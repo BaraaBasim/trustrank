@@ -12,6 +12,12 @@
       url("/Roboto-Regular.ttf");
   }
 
+  @font-face {
+    font-family: "Roboto Bold";
+    src:
+      url("/Roboto-Bold.ttf");
+  }
+
 
 #content {
     display: flex;
@@ -31,14 +37,25 @@
 }
 
 .header button {
+    font-family: "Roboto";
+    width: 20rem;
     text-decoration: none;
-
     border: none;
-    padding-bottom: 3px;
-    border-bottom: 2px solid rgb(129, 129, 129);
-    background-color: white;
+    color: black;
+    padding: 10px;
     cursor: pointer;
+    background-color: white;
 }
+
+/* .header button:hover {
+    text-decoration: none;
+    border: none;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    padding-bottom: 7px;
+    cursor: pointer;
+} */
 
 .logo {
     flex: 1;
@@ -86,17 +103,16 @@
 
 .left-home h2{
     text-transform: uppercase;
-    font-size: 3rem;
-    font-family: "Roboto";
-    font-weight: 700;
+    font-size: 3.3rem;
+    font-family: "Roboto Bold";
 }
 
 .left-home p {
     font-family: "Roboto";
     color: #504f4fdd;
-    width: 40ch;
+    width: 35ch;
     line-height: 2rem;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     
 }
 
