@@ -15,10 +15,12 @@ function createNav() {
 
   const mainBtn = document.createElement("button");
   mainBtn.classList.add("nav-btn");
+  mainBtn.classList.add("active");
   mainBtn.textContent = "Main";
 
   mainBtn.addEventListener("click", () => {
     if (!mainBtn.classList.contains("active")) {
+      deactivateBtns();
       mainBtn.classList.add("active");
       //   loadMain();
     }
@@ -29,6 +31,7 @@ function createNav() {
   contactBtn.textContent = "Contact us";
   contactBtn.addEventListener("click", () => {
     if (!contactBtn.classList.contains("active")) {
+      deactivateBtns();
       contactBtn.classList.add("active");
       //   loadContact();
     }
@@ -40,6 +43,7 @@ function createNav() {
 
   catalogBtn.addEventListener("click", () => {
     if (!catalogBtn.classList.contains("active")) {
+      deactivateBtns();
       catalogBtn.classList.add("active");
       //   loadCatalog();
     }
@@ -56,6 +60,13 @@ function createMain() {
   const main = document.createElement("main");
   main.classList.add("main");
   return main;
+}
+
+function deactivateBtns() {
+  const buttons = document.querySelectorAll(".nav-btn");
+  buttons.forEach((btn) => {
+    btn.classList.remove("active");
+  });
 }
 
 function createFooter() {
@@ -81,6 +92,7 @@ function createFooter() {
 
 function initWebsite() {
   const content = document.getElementById("content");
+
   content.appendChild(createHeader());
   content.appendChild(createMain());
   content.appendChild(createFooter());
