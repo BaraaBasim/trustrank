@@ -1,7 +1,7 @@
 import "./style.css";
 
 function createHeader() {
-  const header = document.createElement("div");
+  const header = document.createElement("header");
   header.classList.add("header");
 
   header.appendChild(createNav());
