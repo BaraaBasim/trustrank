@@ -1,9 +1,13 @@
 import "./style.css";
-
+import loadHome from "./home";
 function createHeader() {
   const header = document.createElement("header");
-  header.classList.add("header");
+  const logoDiv = document.createElement("div");
 
+  header.classList.add("header");
+  logoDiv.classList.add("logo");
+
+  header.appendChild(logoDiv);
   header.appendChild(createNav());
 
   return header;
@@ -22,7 +26,7 @@ function createNav() {
     if (!mainBtn.classList.contains("active")) {
       deactivateBtns();
       mainBtn.classList.add("active");
-      //   loadMain();
+      loadHome();
     }
   });
 
@@ -50,8 +54,8 @@ function createNav() {
   });
 
   nav.appendChild(mainBtn);
-  nav.appendChild(contactBtn);
   nav.appendChild(catalogBtn);
+  nav.appendChild(contactBtn);
 
   return nav;
 }
@@ -59,6 +63,7 @@ function createNav() {
 function createMain() {
   const main = document.createElement("main");
   main.classList.add("main");
+  main.setAttribute("id", "main");
   return main;
 }
 
@@ -73,20 +78,27 @@ function createFooter() {
   const footer = document.createElement("footer");
   footer.classList.add("footer");
 
-  const copyright = document.createElement("p");
-  copyright.textContent = `Copyright © ${new Date().getFullYear()} Baraa Basim`;
+  //   const copyright = document.createElement("p");
+  //   copyright.textContent = `Copyright © ${new Date().getFullYear()} Baraa Basim`;
 
-  const githubLink = document.createElement("a");
-  githubLink.href = "https://github.com/baraabasim";
+  //   const githubLink = document.createElement("a");
+  //   githubLink.href = "https://github.com/baraabasim";
 
-  const githubIcon = document.createElement("i");
-  githubIcon.classList.add("fab");
-  githubIcon.classList.add("fa-github");
+  //   const githubIcon = document.createElement("i");
+  //   githubIcon.classList.add("fab");
+  //   githubIcon.classList.add("fa-github");
 
-  githubLink.appendChild(githubIcon);
-  footer.appendChild(copyright);
-  footer.appendChild(githubLink);
+  //   githubLink.appendChild(githubIcon);
+  //   footer.appendChild(copyright);
+  //   footer.appendChild(githubLink);
 
+  const whatsapp = document.createElement("p");
+  whatsapp.textContent = "WhatsApp: +123123123";
+  const wechat = document.createElement("p");
+  wechat.textContent = "WeChat: 123123123";
+
+  footer.appendChild(whatsapp);
+  footer.appendChild(wechat);
   return footer;
 }
 
@@ -96,6 +108,7 @@ function initWebsite() {
   content.appendChild(createHeader());
   content.appendChild(createMain());
   content.appendChild(createFooter());
+  loadHome();
 }
 
 initWebsite();
