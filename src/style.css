@@ -20,12 +20,12 @@
 }
 
 
+
+
 #content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 5fr 1fr;
+    align-items: stretch;
 }
 
 /* Header */
@@ -66,9 +66,9 @@
 
 /* Home */
 .home {
+    min-height: 60vh;
     padding-top: 10rem;
     display: flex;
-    height: 100%;
 }
 
 .right-home {
@@ -80,7 +80,7 @@
 
 .img {
     height: 80%;
-    width: 60%;
+    width: 50%;
     background-image: url(/shipping.svg);
     background-repeat: no-repeat;
     background-size: cover;
