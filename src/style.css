@@ -19,14 +19,23 @@
         url("/Roboto-Bold.ttf");
 }
 
-
-
-
-#content {
-    display: grid;
-    grid-template-rows: 1fr 5fr 1fr;
-    align-items: stretch;
+html, body {
+    height: 100%;
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+}
+
 
 /* Header */
 .header {
@@ -60,39 +69,41 @@
 }
 
 .main {
+    padding: 4rem;
+    flex-grow: 1;
     height: 100%;
     width: 100%;
 }
 
 /* Home */
 .home {
-    min-height: 60vh;
+    height: 100%;
     padding-top: 10rem;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    animation: fadeIn 1s;
 }
 
 .right-home {
-    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .img {
-    height: 80%;
-    width: 50%;
+    height: 100%;
+    width: 100%;
     background-image: url(/shipping.svg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 
 
 .left-home {
-    padding-left: 3rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    width: 40%;
 }
 
 .left-home h2{
@@ -107,7 +118,6 @@
     width: 35ch;
     line-height: 2rem;
     font-size: 1.5rem;
-    
 }
 
 
@@ -128,9 +138,10 @@
 
 /* Catalog */
 .catalog {
+    height: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    grid-auto-rows: 250px;
+    grid-auto-rows: 350px;
     gap: 2rem;
     padding: 5rem;
 }
