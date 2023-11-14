@@ -1,5 +1,6 @@
 import "./style.css";
 import loadHome from "./home";
+import loadCatalog from "./catalog";
 function createHeader() {
   const header = document.createElement("header");
   const logoDiv = document.createElement("div");
@@ -49,7 +50,7 @@ function createNav() {
     if (!catalogBtn.classList.contains("active")) {
       deactivateBtns();
       catalogBtn.classList.add("active");
-      //   loadCatalog();
+      loadCatalog();
     }
   });
 
